@@ -28,14 +28,10 @@ import {
   ShopCreateProduct,
   ShopAllProducts,
   ShopCreateEvents,
-  ShopAllEvents,
-  ShopAllCoupouns,
   ShopPreviewPage,
   ShopAllOrders,
   ShopOrderDetails,
-  ShopAllRefunds,
   ShopSettingsPage,
-  ShopWithDrawMoneyPage,
   ShopInboxPage,
 } from "./routes/ShopRoutes";
 
@@ -209,15 +205,6 @@ const App = () => {
         />
 
         <Route
-          path="/dashboard-refunds"
-          element={
-            <SellerProtectedRoute>
-              <ShopAllRefunds />
-            </SellerProtectedRoute>
-          }
-        />
-
-        <Route
           path="/order/:id"
           element={
             <SellerProtectedRoute>
@@ -234,50 +221,7 @@ const App = () => {
             </SellerProtectedRoute>
           }
         />
-
-        <Route
-          path="/dashboard-withdraw-money"
-          element={
-            <SellerProtectedRoute>
-              <ShopWithDrawMoneyPage />
-            </SellerProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/dashboard-messages"
-          element={
-            <SellerProtectedRoute>
-              <ShopInboxPage />
-            </SellerProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/dashboard-create-event"
-          element={
-            <SellerProtectedRoute>
-              <ShopCreateEvents />
-            </SellerProtectedRoute>
-          }
-        />
-        <Route
-          path="/dashboard-events"
-          element={
-            <SellerProtectedRoute>
-              <ShopAllEvents />
-            </SellerProtectedRoute>
-          }
-        />
-        <Route
-          path="/dashboard-coupouns"
-          element={
-            <SellerProtectedRoute>
-              <ShopAllCoupouns />
-            </SellerProtectedRoute>
-          }
-        />
-
+        
         {/* Admin Routes */}
         <Route
           path="/admin/dashboard"
